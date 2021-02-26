@@ -37,7 +37,7 @@ class App extends Component {
         this.setState({ newMessage: e.target.value });
     }
 
-    //console.log('test');  WHY ARE YOU ERRORING OUT?
+    //console.log('test');  react breaks if i uncomment this.  why?
 
     handleSubmit() {
         console.log('test');
@@ -46,6 +46,8 @@ class App extends Component {
             message: this.state.newMessage
         }
         this.setState({ chirps: [...this.state.chirps, newChirp] })
+        //i can get submit to create new chirps, but cannot get it to input the text box input into the chirps 
+        //also, would like to have the chirps in order of newest on top, how to?
     }
 
     render() {
